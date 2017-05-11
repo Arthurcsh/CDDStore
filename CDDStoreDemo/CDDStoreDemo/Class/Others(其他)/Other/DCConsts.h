@@ -20,8 +20,6 @@ UIKIT_EXTERN CGFloat const DCMargin;
 /** 立即购买点击退出当前界面通知 */
 UIKIT_EXTERN NSString * const DCBuyButtonDidDismissClickNotificationCenter;
 
-
-
 /** 屏幕高度 */
 #define ScreenH [UIScreen mainScreen].bounds.size.height
 /** 屏幕宽度 */

@@ -17,7 +17,7 @@
 
 #import "DCConsts.h"
 #import "DCSpeedy.h"
-#import "DCCustomButton.h"
+#import "DCStoreButton.h"
 #import "DCStoreCoverLabel.h"
 #import "UIView+DCExtension.h"
 #import "XWDrawerAnimator.h"
@@ -133,19 +133,19 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
     
     [DCSpeedy setSomeOneChangeColor:showNum_Label SetSelectArray:@[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"] SetChangeColor:[UIColor orangeColor]];
     
-    DCCustomButton *customButton = [DCCustomButton buttonWithType:UIButtonTypeCustom];
-    customButton.frame = CGRectMake(ScreenW - 70, 0 , 60 , 50);
+    DCDetailButton *customButton = [DCDetailButton buttonWithType:UIButtonTypeCustom];
+    customButton.frame = CGRectMake(ScreenW - 60, 0 , 60 , 40);
     [customButton setTitle:@"筛选" forState:UIControlStateNormal];
-    [customButton setImage:[UIImage imageNamed:@"custom"] forState:UIControlStateNormal];
+    [customButton setImage:[UIImage imageNamed:@"tbsearch_sortbar_filter_default"] forState:UIControlStateNormal];
     customButton.titleLabel.font = [UIFont systemFontOfSize:12];
     [customButton addTarget:self action:@selector(customButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [seachPhoneView addSubview:customButton];
     
     UIButton *swithBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [swithBtn addTarget:self action:@selector(garidButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-    [swithBtn setImage:[UIImage imageNamed:@"product_list_list_btn"] forState:UIControlStateNormal];
+    [swithBtn setImage:[UIImage imageNamed:@"shop_search_list_style_list"] forState:UIControlStateNormal];
     
-    swithBtn.frame = CGRectMake(ScreenW - 120, 0, 50, 50);
+    swithBtn.frame = CGRectMake(ScreenW - 110, 0, 50, 50);
     
     [seachPhoneView addSubview:swithBtn];
     
@@ -189,10 +189,10 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
     
     if (_isGrid) {
         [self coverViewRemoveGridCell];
-        [btn setImage:[UIImage imageNamed:@"product_list_grid_btn"] forState:0];
+        [btn setImage:[UIImage imageNamed:@"shop_search_list_style_waterfall"] forState:0];
     } else {
         [self coverViewRemoveGridCell];
-        [btn setImage:[UIImage imageNamed:@"product_list_list_btn"] forState:0];
+        [btn setImage:[UIImage imageNamed:@"shop_search_list_style_list"] forState:0];
     }
 }
 
@@ -354,14 +354,14 @@ static NSString *DCStoreGridCollectionCellID = @"DCStoreGridCollectionCell";
                 make.height.mas_equalTo(standCoverView).multipliedBy(0.5);
                 make.right.mas_equalTo(standCoverView);
                 make.top.mas_equalTo(standCoverView);
-                make.width.mas_equalTo(@(55));
+                make.width.mas_equalTo(@(60));
             }];
             
             [standSameButton mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.height.mas_equalTo(standCoverView).multipliedBy(0.5);
                 make.right.mas_equalTo(standCoverView);
                 make.top.mas_equalTo(standDiffButton.mas_bottom);
-                make.width.mas_equalTo(@(55));
+                make.width.mas_equalTo(@(60));
             }];
             
             [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {

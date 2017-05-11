@@ -143,11 +143,9 @@ static NSString *const DCIntroduceSelectCellID = @"DCIntroduceSelectCell";
     verticalPartingLine.backgroundColor = [self.view.backgroundColor colorWithAlphaComponent:0.5];
     [shopTitleView addSubview:verticalPartingLine];
     
-    DCStoreButton *shareButton = [DCStoreButton buttonWithType:UIButtonTypeCustom];
+    DCDetailButton *shareButton = [DCDetailButton buttonWithType:UIButtonTypeCustom];
     [shareButton setImage:[UIImage imageNamed:@"shareview"] forState:UIControlStateNormal];
     [shareButton setTitle:@"分享" forState:UIControlStateNormal];
-    shareButton.titleLabel.font = [UIFont systemFontOfSize:12];
-    [shareButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [shareButton addTarget:self action:@selector(setUpShareView) forControlEvents:UIControlEventTouchUpInside];
     [shopTitleView addSubview:shareButton];
 

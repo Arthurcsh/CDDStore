@@ -10,4 +10,11 @@
 
 @interface DCStoreButton : UIButton
 
+
+@end
+
+
+@interface DCDetailButton : UIButton
+
+
 @end

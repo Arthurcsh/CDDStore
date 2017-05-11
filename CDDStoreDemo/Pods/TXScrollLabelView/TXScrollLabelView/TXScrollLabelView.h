@@ -3,8 +3,14 @@
 //
 //  Created by tingxins on 2/23/16.
 //  Copyright © 2016 tingxins. All rights reserved.
-//  Welcome to my blog: https://tingxins.com
-//  滚动视图
+//  如果在使用 TXScrollLabelView 的过程中出现bug，请及时联系，我会尽快进行修复。如果有更好的点子，直接 Open an issue 或者 submit a pr。
+/**
+ Blog : https://tingxins.com
+ 简书 ：http://www.jianshu.com/u/5141561e4d59
+ GitHub : https://github.com/tingxins
+ Weibo : http://weibo.com/tingxins
+ Twitter : http://twitter.com/tingxins
+ */
 
 #define TX_DEPRECATED_METHODS(explain) __attribute__((deprecated(explain)))
 #define TX_DEPRECATED_MESSAGES(explain) __deprecated_msg(explain)
@@ -16,7 +22,7 @@
 
 @protocol TXScrollLabelViewDelegate <NSObject>
 @optional
-- (void)scrollLabelView:(TXScrollLabelView *)scrollLabelView didClickWithText:(NSString *)text;
+- (void)scrollLabelView:(TXScrollLabelView *)scrollLabelView didClickWithText:(NSString *)text atIndex:(NSInteger)index;
 
 @end
 
@@ -68,13 +74,15 @@ typedef NS_ENUM(NSInteger, TXScrollLabelViewType) {
 
 - (void)setupAttributeTitle:(NSAttributedString *)attributeTitle;
 
-#pragma mark - Class Methods
+#pragma mark - Instance Methods
 
 - (instancetype)initWithTitle:(NSString *)scrollTitle
                          type:(TXScrollLabelViewType)scrollType
                      velocity:(NSTimeInterval)scrollVelocity
                       options:(UIViewAnimationOptions)options
                         inset:(UIEdgeInsets)inset;
+
+#pragma mark - Factory Methods
 
 + (instancetype)scrollWithTitle:(NSString *)scrollTitle;
 
@@ -121,6 +129,26 @@ typedef NS_ENUM(NSInteger, TXScrollLabelViewType) {
 
 @end
 
+@interface TXScrollLabelView (TXArray)
+
+/**
+ 类初始化方法
+ @param scrollTexts 滚动文本数组
+ */
+- (instancetype)initWithTextArray:(NSArray *)scrollTexts
+                             type:(TXScrollLabelViewType)scrollType
+                         velocity:(NSTimeInterval)scrollVelocity
+                          options:(UIViewAnimationOptions)options
+                            inset:(UIEdgeInsets)inset;
+
++ (instancetype)scrollWithTextArray:(NSArray *)scrollTexts
+                               type:(TXScrollLabelViewType)scrollType
+                           velocity:(NSTimeInterval)scrollVelocity
+                            options:(UIViewAnimationOptions)options
+                              inset:(UIEdgeInsets)inset;
+
+@end
+
 @interface TXScrollLabelView (TXScrollLabelViewDeprecated)
 
 + (instancetype)tx_setScrollTitle:(NSString *)scrollTitle TX_DEPRECATED_MESSAGES("Method deprecated. Use `+ scrollWithTitle:`");
@@ -143,3 +171,10 @@ typedef NS_ENUM(NSInteger, TXScrollLabelViewType) {
                           options:(UIViewAnimationOptions)options
                             inset:(UIEdgeInsets)inset TX_DEPRECATED_MESSAGES("Method deprecated. Use `+ scrollWithTitle:type:velocity:options:inset:`");
 @end
+
+@interface UIView (TXAdditions)
+
+- (void)addTapGesture:(id)target sel:(SEL)selector;
+
+@end
+

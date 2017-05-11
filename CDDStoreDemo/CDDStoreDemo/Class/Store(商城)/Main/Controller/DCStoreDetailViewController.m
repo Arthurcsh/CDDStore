@@ -93,7 +93,7 @@
     
     UIButton *addButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [addButton setTitle:@"加入购物车" forState:UIControlStateNormal];
-    addButton.frame = CGRectMake(ScreenW - 180, 0, 90, 55);
+    addButton.frame = CGRectMake(ScreenW - 200, 0, 100, 55);
     addButton.titleLabel.font = [UIFont systemFontOfSize:16];
     [addButton addTarget:self action:@selector(addShoppingCarButtonClick) forControlEvents:UIControlEventTouchUpInside];
     addButton.backgroundColor = [UIColor redColor];
@@ -101,18 +101,18 @@
     
     UIButton *buyButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [buyButton setTitle:@"立即购买" forState:UIControlStateNormal];
-    buyButton.frame = CGRectMake(ScreenW - 90, 0, 90, 55);
+    buyButton.frame = CGRectMake(ScreenW - 100, 0, 100, 55);
     buyButton.titleLabel.font = [UIFont systemFontOfSize:16];
     [buyButton addTarget:self action:@selector(buyButtonClick) forControlEvents:UIControlEventTouchUpInside];
     buyButton.backgroundColor = [UIColor orangeColor];
     [bottomView addSubview:buyButton];
     
     
-    NSArray *imageNormalNames = @[@"comments on",@"collection_N",@"add shopping on"];
-    NSArray *selectHightNames = @[@"comments",@"collection_S",@"add shopping"];
+    NSArray *imageNormalNames = @[@"flight_title_dongdong_icon_normal",@"fs_skuAttention",@"fs_skuShoppingCart"];
+    NSArray *selectHightNames = @[@"flight_title_dongdong_icon_normal",@"fs_skuAttentionSelected",@"fs_skuShoppingCart"];
     NSArray *titleNames = @[@"客服",@"收藏",@"购物车"];
     
-    CGFloat buttonW = (ScreenW - 190) / 3;
+    CGFloat buttonW = (ScreenW - 200) / 3;
     CGFloat buttonH = 50;
     for (NSInteger i = 0; i < 3; i++) {
         
@@ -132,7 +132,7 @@
         
         if (button.tag == 2) {//购物车数量提示
             UIButton *markButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            markButton.frame = CGRectMake(CGRectGetMaxX(button.imageView.frame), button.imageView.dc_y, DCMargin, DCMargin);
+            markButton.frame = CGRectMake(CGRectGetMaxX(button.imageView.frame) - DCMargin, button.imageView.dc_y, DCMargin, DCMargin);
             [button addSubview:markButton];
             _markButton = markButton;
             [markButton showBadgeWithStyle:WBadgeStyleNumber value:2 animationType:WBadgeAnimTypeScale];  //购物车提示数

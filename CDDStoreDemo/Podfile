@@ -8,5 +8,7 @@ pod "Masonry"
 pod "SDCycleScrollView"
 pod "TXScrollLabelView"
 pod "SVProgressHUD"
+pod "PYSearch"
+
 
 target :"CDDStoreDemo"

@@ -10,6 +10,7 @@
 #import "DCCustomViewController.h"
 #import "DCWebViewController.h"
 #import "DCStoreDetailViewController.h"
+#import "DCNavigationController.h"
 #import "DCStoreCollectionViewController.h"
 
 #import "DCStoreItem.h"
@@ -17,13 +18,14 @@
 
 #import "DCConsts.h"
 #import "DCSpeedy.h"
-#import "DCCustomButton.h"
+#import "DCStoreButton.h"
 #import "UIView+DCExtension.h"
 #import "XWDrawerAnimator.h"
 #import "DCStoreCoverLabel.h"
 #import "UIViewController+XWTransition.h"
 #import "UIBarButtonItem+DCBarButtonItem.h"
 
+#import <PYSearch.h>
 #import <Masonry.h>
 #import <MJRefresh.h>
 #import <MJExtension.h>
@@ -34,7 +36,7 @@
 static NSString *DCStoreItemCellID = @"DCStoreItemCell";
 static UIView *coverView;
 
-@interface DCStoreViewController ()<UITableViewDelegate , UITableViewDataSource,SDCycleScrollViewDelegate,UISearchBarDelegate>
+@interface DCStoreViewController ()<UITableViewDelegate , UITableViewDataSource,SDCycleScrollViewDelegate,UISearchBarDelegate,PYSearchViewControllerDelegate>
 @property (nonatomic , strong) UITableView *tableView;
 /* 数据 */
 @property (strong , nonatomic)NSMutableArray<DCStoreItem *> *storeItem;
@@ -92,7 +94,7 @@ static UIView *coverView;
     
     [self loadStoreDatas];
     
-    [self setUpHeaderView:@[@"mainHead",@"mainHead"] WithAdvertisement:@"如果觉得项目还行，请赏个Star！谢谢"];
+    [self setUpHeaderView:@[@"mainHead",@"mainHead"] WithAdvertisement:@"项目整理不易，赏个星呗！"];
 }
 
 #pragma mark - 头部轮播图
@@ -212,10 +214,10 @@ static UIView *coverView;
     
     [DCSpeedy setSomeOneChangeColor:showNum_Label SetSelectArray:@[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"] SetChangeColor:[UIColor orangeColor]];
     
-    DCCustomButton *customButton = [DCCustomButton buttonWithType:UIButtonTypeCustom];
-    customButton.frame = CGRectMake(ScreenW - 70, 0 , 60 , 50);
+    DCDetailButton *customButton = [DCDetailButton buttonWithType:UIButtonTypeCustom];
+    customButton.frame = CGRectMake(ScreenW - 60, 0 , 60 , 40);
     [customButton setTitle:@"筛选" forState:UIControlStateNormal];
-    [customButton setImage:[UIImage imageNamed:@"custom"] forState:UIControlStateNormal];
+    [customButton setImage:[UIImage imageNamed:@"tbsearch_sortbar_filter_default"] forState:UIControlStateNormal];
     customButton.titleLabel.font = [UIFont systemFontOfSize:12];
     [customButton addTarget:self action:@selector(customButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [seachPhoneView addSubview:customButton];
@@ -344,14 +346,14 @@ static UIView *coverView;
             make.height.mas_equalTo(coverView).multipliedBy(0.5);
             make.right.mas_equalTo(coverView);
             make.top.mas_equalTo(coverView);
-            make.width.mas_equalTo(@(55));
+            make.width.mas_equalTo(@(60));
         }];
         
         [sameButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(coverView).multipliedBy(0.5);
             make.right.mas_equalTo(coverView);
             make.top.mas_equalTo(diffButton.mas_bottom);
-            make.width.mas_equalTo(@(55));
+            make.width.mas_equalTo(@(60));
         }];
         
         [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -419,10 +421,25 @@ static UIView *coverView;
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem ItemWithImage:[UIImage imageNamed:@"search"] WithHighlighted:[UIImage imageNamed:@"search"] Target:self action:@selector(searchButtonClick)];
 }
 
+#pragma mark - 搜索
 -(void)searchButtonClick
 {
-    DCStoreCollectionViewController *storeVc = [[DCStoreCollectionViewController alloc]init];
-    [self.navigationController pushViewController:storeVc animated:YES];
+    NSArray *hotSeaches = @[@" 苹果7P ", @" 三星 ", @" OPPO ", @" 坚果Pro ",
+                            @" 华为荣耀 "];
+    
+    PYSearchViewController *searchViewController = [PYSearchViewController searchViewControllerWithHotSearches:hotSeaches searchBarPlaceholder:NSLocalizedString(@"总有商品一款适合你", @"搜索你喜欢的商品") didSearchBlock:^(PYSearchViewController *searchViewController, UISearchBar *searchBar, NSString *searchText) {
+
+        DCStoreCollectionViewController *storeVc = [[DCStoreCollectionViewController alloc]init];
+        [searchViewController.navigationController pushViewController:storeVc animated:YES];
+    }];
+
+    searchViewController.hotSearchStyle = PYHotSearchStyleARCBorderTag;
+    searchViewController.searchHistoryStyle = PYHotSearchStyleDefault;
+
+    searchViewController.delegate = self;
+    DCNavigationController *nav = [[DCNavigationController alloc] initWithRootViewController:searchViewController];
+    [self presentViewController:nav animated:YES completion:nil];
+    
 }
 
 - (void)noDiff
