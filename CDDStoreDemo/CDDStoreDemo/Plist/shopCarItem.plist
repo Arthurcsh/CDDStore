@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>goodsattrs</key>
+		<string>16G 银色</string>
+		<key>goods_title</key>
+		<string>Apple 苹果 iPhone6s 全网4G 4.7寸 3D touch 1200万像素 热销机型</string>
+		<key>imgs</key>
+		<string>shopImage01</string>
+		<key>price</key>
+		<real>0.01</real>
+		<key>secondtitle</key>
+		<string>1200万像素，4.7英寸屏幕，采用64位处理器</string>
+		<key>goodsnum</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>goodsattrs</key>
+		<string>128G 金色 12期分期</string>
+		<key>expressage</key>
+		<string>30</string>
+		<key>goods_title</key>
+		<string>Apple 苹果 iPhone6s 全网4G 4.7寸 3D touch 1200万像素 热销机型</string>
+		<key>imgs</key>
+		<string>shopImage02</string>
+		<key>price</key>
+		<real>0.01</real>
+		<key>secondtitle</key>
+		<string>1200万像素，4.7英寸屏幕，采用64位处理器</string>
+		<key>goodsnum</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>goodsattrs</key>
+		<string>256G 至尊顶配版 中国红</string>
+		<key>expressage</key>
+		<string>10</string>
+		<key>goods_title</key>
+		<string>Apple 苹果 iPhone7 全网4G 4.7寸 最新款</string>
+		<key>imgs</key>
+		<string>shopImage03</string>
+		<key>price</key>
+		<real>0.01</real>
+		<key>secondtitle</key>
+		<string>128G容量畅销首选！</string>
+		<key>goodsnum</key>
+		<integer>3</integer>
+	</dict>
+</array>
+</plist>

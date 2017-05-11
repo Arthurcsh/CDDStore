@@ -94,6 +94,11 @@
 		1844EF7C1EC4B06700C39CEB /* XWFilterAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1844EF561EC4B06700C39CEB /* XWFilterAnimator.m */; };
 		1844EF7D1EC4B06700C39CEB /* XWFilterTransitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1844EF581EC4B06700C39CEB /* XWFilterTransitionView.m */; };
 		1844EF7E1EC4B06700C39CEB /* XWMagicMoveAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1844EF5B1EC4B06700C39CEB /* XWMagicMoveAnimator.m */; };
+		1844EF971EC4B52400C39CEB /* DCShopCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1844EF961EC4B52400C39CEB /* DCShopCarViewController.xib */; };
+		1844EF9A1EC4B95300C39CEB /* DCShopCarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1844EF991EC4B95300C39CEB /* DCShopCarItem.m */; };
+		1844EF9E1EC4B97400C39CEB /* DCShopCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1844EF9C1EC4B97400C39CEB /* DCShopCarCell.m */; };
+		1844EF9F1EC4B97400C39CEB /* DCShopCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1844EF9D1EC4B97400C39CEB /* DCShopCarCell.xib */; };
+		1844EFA11EC4D34600C39CEB /* shopCarItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1844EFA01EC4D34600C39CEB /* shopCarItem.plist */; };
 		187E678B1E7D793100722607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E678A1E7D793100722607 /* main.m */; };
 		187E67961E7D793100722607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187E67951E7D793100722607 /* Assets.xcassets */; };
 		187E67991E7D793100722607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187E67971E7D793100722607 /* LaunchScreen.storyboard */; };
@@ -153,8 +158,6 @@
 		1844EE531EC4AF5D00C39CEB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		1844EE561EC4AF5D00C39CEB /* DCShopCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCShopCarViewController.h; sourceTree = "<group>"; };
 		1844EE571EC4AF5D00C39CEB /* DCShopCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCShopCarViewController.m; sourceTree = "<group>"; };
-		1844EE591EC4AF5D00C39CEB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		1844EE5B1EC4AF5D00C39CEB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		1844EE601EC4AF5D00C39CEB /* DCStoreCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreCommentViewController.h; sourceTree = "<group>"; };
 		1844EE611EC4AF5D00C39CEB /* DCStoreCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStoreCommentViewController.m; sourceTree = "<group>"; };
 		1844EE631EC4AF5D00C39CEB /* DCStoreIntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStoreIntroduceViewController.h; sourceTree = "<group>"; };
@@ -288,6 +291,13 @@
 		1844EF581EC4B06700C39CEB /* XWFilterTransitionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWFilterTransitionView.m; sourceTree = "<group>"; };
 		1844EF5A1EC4B06700C39CEB /* XWMagicMoveAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWMagicMoveAnimator.h; sourceTree = "<group>"; };
 		1844EF5B1EC4B06700C39CEB /* XWMagicMoveAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWMagicMoveAnimator.m; sourceTree = "<group>"; };
+		1844EF961EC4B52400C39CEB /* DCShopCarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCShopCarViewController.xib; sourceTree = "<group>"; };
+		1844EF981EC4B95300C39CEB /* DCShopCarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCShopCarItem.h; sourceTree = "<group>"; };
+		1844EF991EC4B95300C39CEB /* DCShopCarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCShopCarItem.m; sourceTree = "<group>"; };
+		1844EF9B1EC4B97400C39CEB /* DCShopCarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCShopCarCell.h; sourceTree = "<group>"; };
+		1844EF9C1EC4B97400C39CEB /* DCShopCarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCShopCarCell.m; sourceTree = "<group>"; };
+		1844EF9D1EC4B97400C39CEB /* DCShopCarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCShopCarCell.xib; sourceTree = "<group>"; };
+		1844EFA01EC4D34600C39CEB /* shopCarItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shopCarItem.plist; sourceTree = "<group>"; };
 		187E67861E7D793000722607 /* CDDStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDDStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E678A1E7D793100722607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		187E67951E7D793100722607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -447,6 +457,7 @@
 			children = (
 				1844EE561EC4AF5D00C39CEB /* DCShopCarViewController.h */,
 				1844EE571EC4AF5D00C39CEB /* DCShopCarViewController.m */,
+				1844EF961EC4B52400C39CEB /* DCShopCarViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -454,7 +465,8 @@
 		1844EE581EC4AF5D00C39CEB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1844EE591EC4AF5D00C39CEB /* .gitignore */,
+				1844EF981EC4B95300C39CEB /* DCShopCarItem.h */,
+				1844EF991EC4B95300C39CEB /* DCShopCarItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -462,7 +474,9 @@
 		1844EE5A1EC4AF5D00C39CEB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1844EE5B1EC4AF5D00C39CEB /* .gitignore */,
+				1844EF9B1EC4B97400C39CEB /* DCShopCarCell.h */,
+				1844EF9C1EC4B97400C39CEB /* DCShopCarCell.m */,
+				1844EF9D1EC4B97400C39CEB /* DCShopCarCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -470,8 +484,8 @@
 		1844EE5C1EC4AF5D00C39CEB /* Store(商城) */ = {
 			isa = PBXGroup;
 			children = (
-				1844EE5D1EC4AF5D00C39CEB /* Detail */,
 				1844EE871EC4AF5D00C39CEB /* Main */,
+				1844EE5D1EC4AF5D00C39CEB /* Detail */,
 				1844EEA51EC4AF5D00C39CEB /* Pay */,
 			);
 			path = "Store(商城)";
@@ -587,14 +601,14 @@
 		1844EE881EC4AF5D00C39CEB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1844EE8E1EC4AF5D00C39CEB /* DCStoreDetailViewController.m */,
 				1844EE8F1EC4AF5D00C39CEB /* DCStoreViewController.h */,
-				1844EE891EC4AF5D00C39CEB /* DCCustomViewController.h */,
-				1844EE8A1EC4AF5D00C39CEB /* DCCustomViewController.m */,
+				1844EE901EC4AF5D00C39CEB /* DCStoreViewController.m */,
 				1844EE8B1EC4AF5D00C39CEB /* DCStoreCollectionViewController.h */,
 				1844EE8C1EC4AF5D00C39CEB /* DCStoreCollectionViewController.m */,
 				1844EE8D1EC4AF5D00C39CEB /* DCStoreDetailViewController.h */,
-				1844EE901EC4AF5D00C39CEB /* DCStoreViewController.m */,
+				1844EE8E1EC4AF5D00C39CEB /* DCStoreDetailViewController.m */,
+				1844EE891EC4AF5D00C39CEB /* DCCustomViewController.h */,
+				1844EE8A1EC4AF5D00C39CEB /* DCCustomViewController.m */,
 				1844EE911EC4AF5D00C39CEB /* DCWebViewController.h */,
 				1844EE921EC4AF5D00C39CEB /* DCWebViewController.m */,
 				1844EE931EC4AF5D00C39CEB /* DCWebViewController.xib */,
@@ -886,6 +900,7 @@
 		187E67CA1E7D83ED00722607 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				1844EFA01EC4D34600C39CEB /* shopCarItem.plist */,
 				181F05E41E87DC3E008E88F4 /* ShopItemA.plist */,
 				181F05E51E87DC3E008E88F4 /* ShopItemB.plist */,
 				181F05E61E87DC3E008E88F4 /* ShopItemC.plist */,
@@ -1027,9 +1042,11 @@
 			files = (
 				18E8F6BD1E818A7100D6F275 /* StoreBase.plist in Resources */,
 				1844EF681EC4B06700C39CEB /* restrictedshine.tiff in Resources */,
+				1844EF971EC4B52400C39CEB /* DCShopCarViewController.xib in Resources */,
 				1844EF081EC4AF5E00C39CEB /* DCSureOrderViewController.xib in Resources */,
 				181F05E71E87DC3E008E88F4 /* ShopItemA.plist in Resources */,
 				1844EEF61EC4AF5E00C39CEB /* DCIntroduceSelectCell.xib in Resources */,
+				1844EF9F1EC4B97400C39CEB /* DCShopCarCell.xib in Resources */,
 				1844EEF41EC4AF5E00C39CEB /* DCBaseServiceCell.xib in Resources */,
 				18F8C4E01E7F95AA00AB2070 /* MallShops.plist in Resources */,
 				1844EEF81EC4AF5E00C39CEB /* DCStoreHeadPriceCell.xib in Resources */,
@@ -1041,6 +1058,7 @@
 				187E67961E7D793100722607 /* Assets.xcassets in Resources */,
 				1844EF061EC4AF5E00C39CEB /* DCStoreItemCell.xib in Resources */,
 				1844EEFE1EC4AF5E00C39CEB /* DCWebViewController.xib in Resources */,
+				1844EFA11EC4D34600C39CEB /* shopCarItem.plist in Resources */,
 				181F05E81E87DC3E008E88F4 /* ShopItemB.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1124,6 +1142,7 @@
 				1844EEAB1EC4AF5D00C39CEB /* AppDelegate.m in Sources */,
 				1844EEFF1EC4AF5E00C39CEB /* DCStoreItem.m in Sources */,
 				1844EEE61EC4AF5E00C39CEB /* DCStoreCommentViewController.m in Sources */,
+				1844EF9E1EC4B97400C39CEB /* DCShopCarCell.m in Sources */,
 				1844EF6A1EC4B06700C39CEB /* XWCoolAnimator+XWExplode.m in Sources */,
 				1844EEEA1EC4AF5E00C39CEB /* DCStoreItemSelectViewController.m in Sources */,
 				1844EEDF1EC4AF5E00C39CEB /* DCStoreButton.m in Sources */,
@@ -1150,6 +1169,7 @@
 				1844EF7B1EC4B06700C39CEB /* XWFilterAnimator+XWSwipe.m in Sources */,
 				1844EF6C1EC4B06700C39CEB /* XWCoolAnimator+XWLines.m in Sources */,
 				1844EF5C1EC4B06700C39CEB /* UIPlaceHolderTextView.m in Sources */,
+				1844EF9A1EC4B95300C39CEB /* DCShopCarItem.m in Sources */,
 				1844EEEB1EC4AF5E00C39CEB /* DCStoreMainViewController.m in Sources */,
 				1844EEAF1EC4AF5D00C39CEB /* DCSpeedy.m in Sources */,
 				1844EEF51EC4AF5E00C39CEB /* DCIntroduceSelectCell.m in Sources */,

@@ -76,7 +76,6 @@ static UIView *coverView;
 {
     if (!_tableView) {
         _tableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tableViewCell"];
         _tableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
         _tableView.delegate = self;
         _tableView.dataSource = self;

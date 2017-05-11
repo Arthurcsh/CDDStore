@@ -47,7 +47,7 @@
     CGFloat buttonW = ScreenW / titles.count;
     
     for (NSInteger i = 0; i < titles.count; i++) {
-        DCStoreButton *button = [DCStoreButton buttonWithType:UIButtonTypeCustom];
+        DCDetailButton *button = [DCDetailButton buttonWithType:UIButtonTypeCustom];
         [button setTitle:titles[i] forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:imgs[i]] forState:UIControlStateNormal];
         button.titleLabel.font = [UIFont systemFontOfSize:14];
