@@ -10,7 +10,7 @@
 
 A：初步实现功能: <br />
            1.骨架界面搭建完成，3DTouch功能初步展示（后续待更新），商品基本界面的搭建  <br />
-           2.商品搜索筛选，这个给大家介绍一款非常好用的搜索框架链接地址:![PYSearch](https://github.com/iphone5solo/PYSearch) <br />
+           2.商品搜索筛选，这个给大家介绍一款非常好用的搜索框架链接地址:[PYSearch](https://github.com/iphone5solo/PYSearch) <br />
            3.购物车界面逻辑初步处理（单商户）  <br />
            4.商品根据品牌和排序进行筛选回调  <br />
            5.选择商品属性，商品属性选择判断（有两种思路 a:自定义view 也就是这个Demo一开始使用的方法 b：使用collectionView最后更新 两种方法稍后readme会详细介绍） <br />
